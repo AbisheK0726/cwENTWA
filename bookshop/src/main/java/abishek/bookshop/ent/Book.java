@@ -13,7 +13,6 @@ import javax.persistence.Id;
 
 
 @Entity
-
 public class Book implements java.io.Serializable {
 
     public Book() {
