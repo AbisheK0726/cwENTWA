@@ -20,18 +20,18 @@ public class BookService {
     @EJB
     private BookFacade bf;
 
-    public Book createNewPerson (Book b) { 
+    public Book createNewBook (Book b) { 
     bf.create(b);
     return b;
-    
     }
     
     // Add business logic below. (Right-click in editor and choose
     // "Insert Code > Add Business Method")
 
-    public List<Book> findAllPersons() {
+    public List<Book> findAllBooks() {
         return bf.findAll();
     }
-
+        
+    
 
 }

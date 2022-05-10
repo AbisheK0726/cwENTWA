@@ -4,6 +4,8 @@
  */
 package abishek.bookshop.ctrl;
 
+import abishek.bookshop.bus.BookService;
+import abishek.bookshop.ent.Book;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.EJB;
@@ -12,12 +14,28 @@ import javax.enterprise.context.RequestScoped;
 
 @Named(value = "bookBean")
 @RequestScoped
+
+
+        
 public class BookBean {
+    
+    @EJB
+    private BookService bs;
     
     public BookBean() {
     }
     
     private String bookName;
+    private Book b = new Book();
+
+    public Book getB() {
+        return b;
+    }
+
+    public void setB(Book b) {
+        this.b = b;
+    }
+    
 
     public String getBookName() {
         return bookName;
@@ -27,5 +45,9 @@ public class BookBean {
         this.bookName = bookName;
     }
     
+    
+    public void createBook(){
+        bs.createNewBook(b);
+    }
     
 }
