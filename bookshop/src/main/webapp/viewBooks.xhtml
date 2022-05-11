@@ -64,8 +64,11 @@
                     <h:commandButton value="DELETE" action="#{bookBean.deleteBook(b.id)}" />
                 </h:form>
             </h:column>
-            
         </h:dataTable>
+        <h:form>
+            <h:commandButton class="button" value="Home" action="start?faces-redirect=true"/>
+        </h:form>
+       
     </h:body>
 </html>
 
