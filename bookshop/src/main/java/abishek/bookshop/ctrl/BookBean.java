@@ -42,5 +42,10 @@ public class BookBean {
         allBooks = bs.findAllBooks();
         return allBooks;
     }
+    
+    public void deleteBook(long id){
+        b = bs.getBookById(id);
+        bs.deleteOldBook(b);
+    }
 
 }

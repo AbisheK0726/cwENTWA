@@ -58,6 +58,13 @@
                 <h:outputText value="#{b.ISBN}"/>
             </h:column>
             
+            <h:column>
+                <f:facet name="header">delete</f:facet>
+                <h:form>
+                    <h:commandButton value="DELETE" action="#{bookBean.deleteBook(b.id)}" />
+                </h:form>
+            </h:column>
+            
         </h:dataTable>
     </h:body>
 </html>

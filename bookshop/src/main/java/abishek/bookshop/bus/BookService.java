@@ -31,4 +31,11 @@ public class BookService {
         return bf.findAll();
     }
 
+    public void deleteOldBook(Book b) {
+        bf.remove(b);    
+    }
+    
+    public Book getBookById(long id){
+        return bf.getBookById(id);
+    }
 }

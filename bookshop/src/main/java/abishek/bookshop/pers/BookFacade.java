@@ -28,6 +28,10 @@ public class BookFacade extends AbstractFacade<Book> {
         super(Book.class);
     }
     
+    public Book getBookById(long id){
+        return em.find(Book.class, id);
+    }
+    
 
 
 }

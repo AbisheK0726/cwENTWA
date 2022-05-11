@@ -99,7 +99,7 @@ public class Book implements java.io.Serializable {
 
     public void setISBN(int ISBN) {
         this.ISBN = ISBN;
-    }
+    } 
 
     @Override
     public int hashCode() {
