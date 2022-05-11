@@ -38,4 +38,8 @@ public class BookService {
     public Book getBookById(long id){
         return bf.getBookById(id);
     }
+    
+    public Book editBook(Book b){
+        return bf.edit(b);
+    }
 }

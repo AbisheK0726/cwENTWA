@@ -47,5 +47,9 @@ public class BookBean {
         b = bs.getBookById(id);
         bs.deleteOldBook(b);
     }
+    
+    public void editBook(Book b){
+        bs.editBook(b);
+    }
 
 }
