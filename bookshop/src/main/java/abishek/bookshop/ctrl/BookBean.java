@@ -15,17 +15,15 @@ import javax.enterprise.context.RequestScoped;
 @Named(value = "bookBean")
 @RequestScoped
 
-
-        
 public class BookBean {
-    
+
     @EJB
     private BookService bs;
-    
+    private List<Book> allBooks = new ArrayList<>();
+
     public BookBean() {
     }
-    
-    private String bookName;
+
     private Book b = new Book();
 
     public Book getB() {
@@ -35,19 +33,14 @@ public class BookBean {
     public void setB(Book b) {
         this.b = b;
     }
-    
 
-    public String getBookName() {
-        return bookName;
-    }
-
-    public void setBookName(String bookName) {
-        this.bookName = bookName;
-    }
-    
-    
-    public void createBook(){
+    public void createBook() {
         bs.createNewBook(b);
     }
-    
+
+    public List<Book> getAllBooks() {
+        allBooks = bs.findAllBooks();
+        return allBooks;
+    }
+
 }

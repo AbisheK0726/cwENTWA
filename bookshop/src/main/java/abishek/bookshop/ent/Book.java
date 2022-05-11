@@ -11,7 +11,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-
 @Entity
 public class Book implements java.io.Serializable {
 
@@ -22,13 +21,13 @@ public class Book implements java.io.Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String title;
+    private String author;
     private String publisher;
     private int edition;
     private int publishedYear;
     private Float cost;
     private String description;
     private int ISBN;
-    private List<String> Author = new ArrayList<>();
 
     public Long getId() {
         return id;
@@ -46,6 +45,14 @@ public class Book implements java.io.Serializable {
         this.title = title;
     }
 
+    public String getAuthor() {
+        return author;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+    
     public String getPublisher() {
         return publisher;
     }
@@ -93,15 +100,6 @@ public class Book implements java.io.Serializable {
     public void setISBN(int ISBN) {
         this.ISBN = ISBN;
     }
-
-    public List<String> getAuthor() {
-        return Author;
-    }
-
-    public void setAuthor(List<String> Author) {
-        this.Author = Author;
-    }
-    
 
     @Override
     public int hashCode() {

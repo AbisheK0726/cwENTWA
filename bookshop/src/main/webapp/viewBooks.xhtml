@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>View Books</title>
+        <h:outputStylesheet  library ="css" name="main.css" />
+    </h:head>
+
+    <h:body>
+        <h1>View All Books</h1>
+        <p/>
+        <h:dataTable value="#{bookBean.allBooks}" var="b" border="1">
+            
+            <h:column>
+                <f:facet name="header">ID</f:facet>
+                <h:outputText value="#{b.id}"/>
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">Title</f:facet>
+                <h:outputText value="#{b.title}"/>
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">Author</f:facet>
+                <h:outputText value="#{b.author}"/>
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">Publisher</f:facet>
+                <h:outputText value="#{b.publisher}"/>
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">Edition</f:facet>
+                <h:outputText value="#{b.edition}"/>
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">Published Year</f:facet>
+                <h:outputText value="#{b.publishedYear}"/>
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">Description</f:facet>
+                <h:outputText value="#{b.description}"/>
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">Cost</f:facet>
+                <h:outputText value="£#{b.cost}"/>
+            </h:column>
+            
+            <h:column>
+                <f:facet name="header">ISBN</f:facet>
+                <h:outputText value="#{b.ISBN}"/>
+            </h:column>
+            
+        </h:dataTable>
+    </h:body>
+</html>
+

@@ -1,0 +1,36 @@
+* {
+    margin: 2px;
+    padding: 1px;
+    font-family: Verdana, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #17001a;
+}
+
+
+.button {
+    background-color: #701d47;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.inputText{
+    width: 40%;
+    padding: 5px 10px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}

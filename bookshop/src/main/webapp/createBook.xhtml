@@ -5,43 +5,48 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Create Book</title>
+        <h:outputStylesheet  library ="css" name="main.css" />
     </h:head>
+    
     <h:body>
-        Add new book
+        <h1>Add new book</h1>
         <h:form>
             <p>Enter Book Title</p>
-            <h:inputText value="#{bookBean.b.title}"></h:inputText>
+            <h:inputText class="inputText" value="#{bookBean.b.title}"></h:inputText>
+            
+            <p>Enter the name of the author</p>
+            <h:inputText class="inputText" value="#{bookBean.b.author}"></h:inputText>
             
             <p>Enter the name of the publisher</p>
-            <h:inputText value="#{bookBean.b.publisher}"></h:inputText>
+            <h:inputText class="inputText" value="#{bookBean.b.publisher}"></h:inputText>
             
             <p>Enter the edition number of the book</p>
-            <h:inputText value="#{bookBean.b.edition}"> 
+            <h:inputText class="inputText" value="#{bookBean.b.edition}">
                 <f:converter converterId="javax.faces.Integer"/> 
             </h:inputText>
             
             <p>Enter the description of the book</p>
-            <h:inputText value="#{bookBean.b.description}"></h:inputText>
+            <h:inputText class="inputText" value="#{bookBean.b.description}"></h:inputText>
             
             <p>Enter the cost of the book</p>
-            <h:inputText value="#{bookBean.b.cost}"> 
+            <h:inputText class="inputText" value="#{bookBean.b.cost}"> 
                 <f:converter converterId="javax.faces.Float"/> 
             </h:inputText>
             
             <p>Enter the ISBN number of the book</p>
-            <h:inputText value="#{bookBean.b.ISBN}"> 
+            <h:inputText class="inputText" value="#{bookBean.b.ISBN}"> 
                 <f:converter converterId="javax.faces.Integer"/> 
             </h:inputText>
             
             <p>Enter the year the book was published on</p>
-            <h:inputText value="#{bookBean.b.publishedYear}"> 
+            <h:inputText class="inputText" value="#{bookBean.b.publishedYear}"> 
                 <f:converter converterId="javax.faces.Integer"/> 
             </h:inputText>
             
-        
-            <h:commandButton value="Add" action="#{bookBean.createBook()}"/>
-            
+            <p/>
+            <h:commandButton class="button" value="Add" action="#{bookBean.createBook()}"/>
         </h:form>
+        
     </h:body>
 </html>
-
+    
